@@ -68,38 +68,34 @@
   </div>
 
 
-  <ion-card>
+  <ion-card class="hover-card">
     <ion-card-header>
-      <ion-card-title>Course</ion-card-title>
+      <ion-card-title>course</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <div class="grid">
-        <ion-card *ngFor="let course of courses"></ion-card>
+        <ion-card class="hover-card" *ngFor="let book of books"></ion-card>
       </div>
     </ion-card-content>
   </ion-card>
 
   
-  <ion-card>
+  <ion-card class="hover-card">
     <ion-card-header>
       <ion-card-title>Books</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <div class="grid">
-        <ion-card *ngFor="let book of books"></ion-card>
+        <ion-card class="hover-card" *ngFor="let book of books"></ion-card>
       </div>
     </ion-card-content>
   </ion-card>
 
 
-  <ion-card>
+  <ion-card class="hover-card">
     <ion-card-header>
       <ion-card-title>Practice Test</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-chip color="primary" *ngFor="let test of tests">
         <ion-label>{{ test }}</ion-label>
-      </ion-chip>
-    </ion-card-content>
-  </ion-card>
-</ion-content>
