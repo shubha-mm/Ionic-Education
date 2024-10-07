@@ -41,11 +41,13 @@ ion-content {
 .search-bar-header {
   padding: 10px;
   border-radius: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  color: #000;
-  background-color: white;
+  color:white;
+ 
 }
 
+.search-bar-header:hover{
+  color: white;
+}
 .search-bar-header ion-input {
   --padding-start: 10px;
   border-radius: 20px;
