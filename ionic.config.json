@@ -1,0 +1,7 @@
+{
+  "name": "online-education-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
