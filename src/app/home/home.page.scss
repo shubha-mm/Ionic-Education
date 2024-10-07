@@ -125,11 +125,28 @@ ion-chip ion-label {
   color: white;
   font-size: 16px;
 }
-.hover-card {
+// /* Remove hover effect from individual cards */
+ion-card {
+  transition: none;
+}
+
+/* Apply hover effect to the grid */
+.hover-grid {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.hover-card:hover {
+.hover-grid:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Apply hover effect to the Practice Test card */
+.hover-test-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-test-card:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
