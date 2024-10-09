@@ -15,6 +15,7 @@ const routes: Routes = [
     path: 'logout',
     loadChildren: () => import('../pages/logout/logout.module').then( m => m.LogoutPageModule)
   },
+  
 ];
 
 @NgModule({
