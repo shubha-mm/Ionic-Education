@@ -15,7 +15,23 @@ const routes: Routes = [
     path: 'logout',
     loadChildren: () => import('../pages/logout/logout.module').then( m => m.LogoutPageModule)
   },
-  
+  {
+    path: 'course',
+    loadChildren: () => import('../pages/course/course.module').then( m => m.CoursePageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('../pages/contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'books',
+    loadChildren: () => import('../pages/books/books.module').then( m => m.BooksPageModule)
+  },
+  {
+    path: 'tests',
+    loadChildren: () => import('../pages/practice-test/practice-test.module').then( m => m.PracticeTestPageModule)
+  }
+
 ];
 
 @NgModule({
