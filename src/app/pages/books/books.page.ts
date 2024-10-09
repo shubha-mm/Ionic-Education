@@ -27,6 +27,13 @@ export class BooksPage {
       description: 'How to apply AI in practical scenarios.',
       image: 'path/to/image3.jpg',
       url: 'https://link-to-practical-ai-book.com'
+    },
+    {
+      title: 'AI Ethics and Society',
+      subtitle: 'Understanding the Implications',
+      description: 'Explore ethical considerations in AI.',
+      image: 'path/to/image4.jpg',
+      url: 'https://link-to-ai-ethics-book.com'
     }
   ];
 
@@ -51,6 +58,13 @@ export class BooksPage {
       description: 'Learn the principles of responsive design.',
       image: 'path/to/image6.jpg',
       url: 'https://link-to-responsive-web-book.com'
+    },
+    {
+      title: 'JavaScript: The Good Parts',
+      subtitle: 'Mastering the Language',
+      description: 'An in-depth look at JavaScript.',
+      image: 'path/to/image7.jpg',
+      url: 'https://link-to-javascript-book.com'
     }
   ];
 
@@ -75,6 +89,13 @@ export class BooksPage {
       description: 'Master statistics for data science.',
       image: 'path/to/image9.jpg',
       url: 'https://link-to-statistics-book.com'
+    },
+    {
+      title: 'Deep Learning with TensorFlow',
+      subtitle: 'A Hands-On Approach',
+      description: 'Explore deep learning techniques.',
+      image: 'path/to/image10.jpg',
+      url: 'https://link-to-deep-learning-book.com'
     }
   ];
 
@@ -99,6 +120,13 @@ export class BooksPage {
       description: 'A guide to ethical hacking principles.',
       image: 'path/to/image12.jpg',
       url: 'https://link-to-ethical-hacking-book.com'
+    },
+    {
+      title: 'Incident Response',
+      subtitle: 'A Practical Guide',
+      description: 'Learn how to respond to cyber incidents.',
+      image: 'path/to/image13.jpg',
+      url: 'https://link-to-incident-response-book.com'
     }
   ];
 

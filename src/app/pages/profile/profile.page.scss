@@ -1,41 +1,32 @@
-.profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-  
-  .profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .student-details {
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .student-details ion-item {
-    --background: transparent;
-    color: white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .student-details ion-label h2 {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .student-details ion-label p {
-    font-size: 16px;
-    margin: 0;
-  }
+.page-content {
+  --background: linear-gradient(to bottom, #4e54c8, #8f44fd);
+  padding: 20px; /* Add padding to the content */
+}
+
+.custom-header {
+  --background: linear-gradient(to right, #4e54c8, #8f44fd);
+  height: 100px; /* Adjust height for the header */
+}
+
+/* Profile image styling */
+.profile-image-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+.profile-image {
+  width: 100px; /* Adjust width as necessary */
+  height: 100px; /* Adjust height as necessary */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Form styling */
+ion-item {
+  margin-bottom: 15px;
+}
+
+ion-button {
+  margin-top: 20px;
+}

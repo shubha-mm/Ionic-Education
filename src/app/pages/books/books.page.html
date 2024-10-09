@@ -28,8 +28,8 @@
     <h2 class="category-title">Artificial Intelligence</h2>
     <ion-grid>
       <ion-row>
-        <ion-col size="6" size-md="4" *ngFor="let aiBook of aiBooks">
-          <ion-card class="course-card" (click)="openBook(aiBook.url)">
+        <ion-col size="6" size-md="3" *ngFor="let aiBook of aiBooks">
+          <ion-card class="course-card">
             <ion-img src="{{ aiBook.image }}" alt="{{ aiBook.title }}"></ion-img>
             <ion-card-header>
               <ion-card-title>{{ aiBook.title }}</ion-card-title>
@@ -37,6 +37,7 @@
             </ion-card-header>
             <ion-card-content>
               {{ aiBook.description }}
+              <ion-button expand="full" (click)="openBook(aiBook.url)">Read More</ion-button>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -49,8 +50,8 @@
     <h2 class="category-title">Web Development</h2>
     <ion-grid>
       <ion-row>
-        <ion-col size="6" size-md="4" *ngFor="let webBook of webBooks">
-          <ion-card class="course-card" (click)="openBook(webBook.url)">
+        <ion-col size="6" size-md="3" *ngFor="let webBook of webBooks">
+          <ion-card class="course-card">
             <ion-img src="{{ webBook.image }}" alt="{{ webBook.title }}"></ion-img>
             <ion-card-header>
               <ion-card-title>{{ webBook.title }}</ion-card-title>
@@ -58,6 +59,7 @@
             </ion-card-header>
             <ion-card-content>
               {{ webBook.description }}
+              <ion-button expand="full" (click)="openBook(webBook.url)">Read More</ion-button>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -70,8 +72,8 @@
     <h2 class="category-title">Data Science</h2>
     <ion-grid>
       <ion-row>
-        <ion-col size="6" size-md="4" *ngFor="let dataBook of dataScienceBooks">
-          <ion-card class="course-card" (click)="openBook(dataBook.url)">
+        <ion-col size="6" size-md="3" *ngFor="let dataBook of dataScienceBooks">
+          <ion-card class="course-card">
             <ion-img src="{{ dataBook.image }}" alt="{{ dataBook.title }}"></ion-img>
             <ion-card-header>
               <ion-card-title>{{ dataBook.title }}</ion-card-title>
@@ -79,6 +81,7 @@
             </ion-card-header>
             <ion-card-content>
               {{ dataBook.description }}
+              <ion-button expand="full" (click)="openBook(dataBook.url)">Read More</ion-button>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -91,8 +94,8 @@
     <h2 class="category-title">Cyber Security</h2>
     <ion-grid>
       <ion-row>
-        <ion-col size="6" size-md="4" *ngFor="let cyberBook of cyberBooks">
-          <ion-card class="course-card" (click)="openBook(cyberBook.url)">
+        <ion-col size="6" size-md="3" *ngFor="let cyberBook of cyberBooks">
+          <ion-card class="course-card">
             <ion-img src="{{ cyberBook.image }}" alt="{{ cyberBook.title }}"></ion-img>
             <ion-card-header>
               <ion-card-title>{{ cyberBook.title }}</ion-card-title>
@@ -100,6 +103,7 @@
             </ion-card-header>
             <ion-card-content>
               {{ cyberBook.description }}
+              <ion-button expand="full" (click)="openBook(cyberBook.url)">Read More</ion-button>
             </ion-card-content>
           </ion-card>
         </ion-col>

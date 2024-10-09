@@ -53,30 +53,28 @@
 }
 
 /* Book card styling */
-.book-card {
+.course-card { /* You can rename this class to book-card if preferred */
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
 }
 
-.book-card:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+.course-card:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
 }
 
-/* Image styling for book cards */
-.book-card ion-img {
+.course-card ion-img {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   height: 150px; /* Fixed height for images */
   object-fit: cover; /* Ensure images cover the area */
 }
 
-.book-card-title {
+.course-card-title {
   font-size: 18px; /* Title font size */
 }
 
-.book-card-subtitle {
+.course-card-subtitle {
   font-size: 14px; /* Subtitle font size */
 }
