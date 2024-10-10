@@ -1,6 +1,21 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+// src/main.ts
+import { enableProdMode } from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { environment } from './environments/environment';
 
-import { AppModule } from './app/app.module';
+import { AppComponent } from './app/app.component';
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+if (environment.production) {
+  enableProdMode();
+}
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(Routes),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAuth(() => getAuth())
+  ]
+});
