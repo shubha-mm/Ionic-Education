@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-books', // Make sure the selector is unique
+  selector: 'app-books', 
   templateUrl: './books.page.html',
-  styleUrls: ['./books.page.scss'], // Ensure that this file exists
+  styleUrls: ['./books.page.scss'], 
 })
 export class BooksPage {
   aiBooks = [
@@ -131,15 +131,15 @@ export class BooksPage {
   ];
 
   openBook(url: string) {
-    window.open(url, '_blank'); // Opens the URL in a new tab
+    window.open(url, '_blank'); 
   }
 
-  // Implement searchBooks() and openSidebar() methods if needed
+  
   searchBooks() {
-    // Implement your search functionality here
+    
   }
 
   openSidebar() {
-    // Implement your sidebar opening functionality here
+    
   }
 }

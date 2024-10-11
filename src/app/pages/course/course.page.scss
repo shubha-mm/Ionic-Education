@@ -1,30 +1,30 @@
 .page-content {
   --background: linear-gradient(to bottom, #4e54c8, #8f44fd);
-  padding: 20px; /* Add padding to the content */
+  padding: 20px; 
 }
 
 .custom-header {
   --background: linear-gradient(to right, #4e54c8, #8f44fd);
-  height: 100px; /* Adjust height for the header */
-  padding: 10px; /* Add padding for content alignment */
+  height: 100px; 
+  padding: 10px; 
   display: flex;
-  align-items: center; /* Align items in the center */
+  align-items: center; 
 }
 
-/* Title styling */
+
 .header-title {
-  flex: 1; /* Allow title to take available space */
-  color: white; /* Title color */
+  flex: 1; 
+  color: white; 
 }
 
-/* Search bar styling */
+
 .search-container {
   display: flex;
   align-items: center;
 }
 
 .search-input {
-  width: 200px; /* Fixed width for the search input */
+  width: 200px; 
   height: 45px;
   border-radius: 20px;
   background-color: white;
@@ -38,43 +38,43 @@
   height: 45px;
 }
 
-/* Course category section styling */
+
 .category-section {
   margin-top: 20px;
 }
 
 .category-title {
   color: white;
-  font-size: 24px; /* Increased font size for better visibility */
+  font-size: 24px; 
   font-weight: bold;
   margin-bottom: 15px;
   border-bottom: 2px solid white;
   padding-bottom: 5px;
 }
 
-/* Course card styling */
+
 .course-card {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s; /* Smooth transition for hover effect */
+  transition: transform 0.2s; 
 }
 
 .course-card:hover {
-  transform: scale(1.02); /* Slight zoom effect on hover */
+  transform: scale(1.02); 
 }
 
 .course-card ion-img {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  height: 150px; /* Fixed height for images */
-  object-fit: cover; /* Ensure images cover the area */
+  height: 150px; 
+  object-fit: cover; 
 }
 
 .course-card-title {
-  font-size: 18px; /* Title font size */
+  font-size: 18px; 
 }
 
 .course-card-subtitle {
-  font-size: 14px; /* Subtitle font size */
+  font-size: 14px; 
 }

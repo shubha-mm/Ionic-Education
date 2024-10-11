@@ -35,14 +35,14 @@ export class CoursesPage {
   ];
 
   openSidebar() {
-    // Implementation for opening the sidebar menu
+    
   }
 
   searchCourses() {
-    // Implementation for searching courses
+   
   }
 
   openVideo(videoUrl: string) {
-    window.open(videoUrl, '_blank'); // Opens the video link in a new tab
+    window.open(videoUrl, '_blank'); 
   }
 }
