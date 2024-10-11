@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'tests',
     loadChildren: () => import('../pages/practice-test/practice-test.module').then( m => m.PracticeTestPageModule)
+  },
+  {
+    path: 'sidebar',
+    loadChildren: () => import('../sidebar/sidebar.module').then( m => m.SidebarPageModule)
   }
 
 ];
