@@ -48,7 +48,6 @@ const routes: Routes = [
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   }
 
-
 ];
 
 @NgModule({

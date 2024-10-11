@@ -40,7 +40,6 @@ const routes: Routes = [
     path: 'sidebar',
     loadChildren: () => import('../sidebar/sidebar.module').then( m => m.SidebarPageModule)
   },
-
 ];
 
 @NgModule({
