@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'sidebar',
     loadChildren: () => import('../sidebar/sidebar.module').then( m => m.SidebarPageModule)
+  },
+  {
+    path: 'sign-in',
+    loadChildren: () => import('../sign-in/sign-in.module').then( m => m.SignInPageModule)
   }
 
 ];
