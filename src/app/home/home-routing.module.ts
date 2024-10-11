@@ -15,6 +15,11 @@ const routes: Routes = [
     path: 'logout',
     loadChildren: () => import('../pages/logout/logout.module').then( m => m.LogoutPageModule)
   },
+
+  {
+    path: 'signup',
+    loadChildren: () => import('../signup/signup.module').then( m => m.SignupPageModule)
+  },
   {
     path: 'course',
     loadChildren: () => import('../pages/course/course.module').then( m => m.CoursePageModule)
@@ -34,7 +39,7 @@ const routes: Routes = [
   {
     path: 'sidebar',
     loadChildren: () => import('../sidebar/sidebar.module').then( m => m.SidebarPageModule)
-  }
+  },
 
 ];
 

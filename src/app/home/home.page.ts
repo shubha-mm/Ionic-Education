@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,5 +12,9 @@ export class HomePage {
   books = ['Book 1', 'Book 2', 'Book 3'];
   tests = ['Test 1', 'Test 2', 'Test 3'];
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
+
+  logout() {
+    this.authService.logout();
+  }
 }
