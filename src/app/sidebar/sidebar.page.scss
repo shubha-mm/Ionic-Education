@@ -1,0 +1,16 @@
+.menu-list ion-item {
+    margin-top: 10px;
+    --background: transparent;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .menu-list ion-item ion-icon {
+    font-size: 20px;
+    color: white;
+  }
+  
+  .menu-list ion-label {
+    color: white;
+    font-size: 16px;
+  }

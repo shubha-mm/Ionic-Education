@@ -5,18 +5,12 @@ ion-content {
   height: 100%;
 
 
-  &::-webkit-scrollbar {
-    width: 0px; 
-    background: transparent; 
-    scrollbar-width: none;
+  .scroller {
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
   }
-
-  
-  &::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px; 
-  }
-
 
   scrollbar-width: thin; 
 }
@@ -105,24 +99,6 @@ ion-chip {
 
 ion-chip ion-label {
   font-weight: bold;
-}
-
-
-.menu-list ion-item {
-  margin-top: 10px;
-  --background: transparent;
-  color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.menu-list ion-item ion-icon {
-  font-size: 20px;
-  color: white;
-}
-
-.menu-list ion-label {
-  color: white;
-  font-size: 16px;
 }
 
 ion-card {
