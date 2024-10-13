@@ -1,0 +1,47 @@
+.custom-toolbar {
+    --background: #3880ff; /* Custom toolbar background color */
+    --color: white; /* Title color */
+    text-align: center;
+  }
+  
+  .custom-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f0f0f0; /* Light background for content area */
+  }
+  
+  .login-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-item {
+    margin-bottom: 20px;
+  }
+  
+  .login-button {
+    --background: #3880ff; /* Custom color for login button */
+    --border-radius: 8px;
+    --padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .signup-button {
+    --background: #ff9800; /* Custom color for sign-up button */
+    --border-radius: 8px;
+    --padding: 10px;
+    margin-top: 10px;
+  }
+  
+  ion-label {
+    color: #333; /* Darker label text */
+  }
+  
+  ion-input {
+    color: #555; /* Custom input text color */
+  }
+  

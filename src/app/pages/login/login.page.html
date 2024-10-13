@@ -1,23 +1,27 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="custom-toolbar">
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="custom-content">
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input [(ngModel)]="email" type="email"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input [(ngModel)]="password" type="password"></ion-input>
-        </ion-item>
-        <ion-button expand="full" (click)="login()">Login</ion-button>
-        <ion-button expand="full" routerLink="/signup" color="secondary">Sign Up</ion-button> <!-- Link to Signup page -->
+      <ion-col size="12" size-md="6" offset-md="3">
+        <div class="login-container">
+          <ion-item class="custom-item">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input [(ngModel)]="email" type="email"></ion-input>
+          </ion-item>
+          <ion-item class="custom-item">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input [(ngModel)]="password" type="password"></ion-input>
+          </ion-item>
+          <ion-button expand="full" (click)="login()" class="login-button">Login</ion-button>
+          <ion-button expand="full" routerLink="/signup" color="secondary" class="signup-button">Sign Up</ion-button>
+          <ion-button  routerLink="/home">
+            <ion-icon name="arrow-back-outline" ></ion-icon>Back</ion-button>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
