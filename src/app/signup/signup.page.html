@@ -1,23 +1,35 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Sign Up</ion-title>
+  <ion-toolbar class="custom-header">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/login">
+        <ion-icon name="arrow-back-outline"></ion-icon> <!-- Back Button -->
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="header-title">Sign Up</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input [(ngModel)]="email" type="email"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input [(ngModel)]="password" type="password"></ion-input>
-        </ion-item>
-        <ion-button expand="full" (click)="signup()">Sign Up</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-content class="page-content">
+  <ion-card class="signup-card">
+    <ion-card-header>
+      <ion-card-title>Sign Up</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item class="custom-item">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-item">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" (click)="signup()" class="signup-button">Sign Up</ion-button>
+      <ion-button expand="full" routerLink="/login" color="light" class="login-button">
+        Already have an account? Login
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

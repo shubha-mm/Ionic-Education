@@ -1,12 +1,12 @@
 ion-content {
-  --background: linear-gradient(to top, #843cf6, #3b82f6);
+  --background: linear-gradient(to top, #831e79, #5645ad);
   padding: 0;
   margin: 0;
   height: 100%;
 }
 
 .header-bg {
-  background: linear-gradient(to right, #c4e0e5, #4ca1af);
+  background: linear-gradient(to right, #831e79, #5645ad);
   height: 150px;
   display: flex;
   align-items: center;
@@ -19,24 +19,6 @@ ion-content {
   font-weight: bold;
 }
 
-.search-bar-header {
-  padding: 10px;
-  border-radius: 20px;
-  color: white;
-}
-
-.search-bar-header:hover {
-  color: white;
-}
-
-.search-bar-header ion-input {
-  --padding-start: 10px;
-  border-radius: 20px;
-}
-
-.search-bar-header ion-button {
-  --color: #3b82f6;
-}
 
 ion-card {
   margin: 10px 0;
@@ -62,7 +44,7 @@ ion-card-content {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
@@ -86,29 +68,7 @@ ion-chip ion-label {
   font-weight: bold;
 }
 
-.hover-grid {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.hover-grid:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
-.hover-test-card {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.hover-test-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(70, 68, 143, 0.2);
-}
 
-.scroll {
-  scrollbar-width: thin;
-  -ms-overflow-style: none;  /* IE and Edge */
-}
-
-.scroll::-webkit-scrollbar {
-  width: 0;  /* Chrome, Safari, Opera */
-}

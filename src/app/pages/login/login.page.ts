@@ -16,11 +16,11 @@ export class LoginPage {
   login() {
     this.authService.login(this.email, this.password)
       .then(() => {
-        this.router.navigate(['/home']);  // Navigate to the home page on success
+        this.router.navigate(['/home']); 
       })
-      .catch((error: any) => {  // Explicitly set the type of error
+      .catch((error: any) => {  
         console.log('Login error:', error);
-        // Handle the error, e.g., display an alert
+        
       });
   }
 }
