@@ -1,9 +1,11 @@
+/* Custom Toolbar */
 .custom-toolbar {
   --background: #1e1e1e;
   --color: #ffffff;
   text-align: center;
 }
 
+/* Section Header */
 .section-header {
   text-align: center;
   margin-bottom: 50px;
@@ -18,13 +20,11 @@
 
 .section-header p {
   color: #fff;
-}
-
-.container {
-  max-width: 1080px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
+/* Grid and Card Styling */
 .contact-info-card, .contact-form ion-card {
   background-color: #ffffff;
   border-radius: 10px;
@@ -67,6 +67,7 @@
   font-size: 1em;
 }
 
+/* Contact Form Styling */
 .contact-form h2 {
   color: #333;
   font-size: 2em;
@@ -86,6 +87,7 @@
   border: 1px solid #00bcd4;
 }
 
+/* Background Image and Dark Overlay */
 ion-content {
   --background: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center/cover;
   position: relative;
@@ -98,5 +100,56 @@ ion-content::after {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.7); /* Adjust the opacity as needed */
+  background-color: rgba(0,0,0,0.7); /* Dark overlay */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2.5em;
+  }
+
+  .section-header p {
+    font-size: 1em;
+  }
+
+  .contact-info-item, .contact-info-icon {
+    margin-bottom: 20px;
+  }
+
+  ion-content::after {
+    background-color: rgba(0,0,0,0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 2em;
+  }
+
+  .section-header p {
+    font-size: 0.9em;
+  }
+
+  .contact-info-item, .contact-info-icon {
+    margin-bottom: 15px;
+  }
+
+  .contact-info-icon ion-icon {
+    font-size: 24px;
+    line-height: 60px;
+  }
+
+  .contact-info-icon {
+    height: 60px;
+    width: 60px;
+  }
+
+  .contact-form h2 {
+    font-size: 1.8em;
+  }
+
+  .send-button {
+    font-size: 16px;
+  }
 }
