@@ -1,33 +1,85 @@
 <ion-header>
-  <ion-toolbar class="custom-header">
-    <ion-buttons slot="start">
-      <ion-button routerLink="/home">
-        <ion-icon name="arrow-back-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+  <ion-toolbar class="custom-toolbar">
     <ion-title>Contact Us</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="page-content">
-  <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
-    <ion-item>
-      <ion-label position="floating">Name</ion-label>
-      <ion-input type="text" name="name" required [(ngModel)]="contact.name"></ion-input>
-    </ion-item>
+<ion-content>
+  <div class="section-header">
+    <h2>Contact Us</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+  </div>
 
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" name="email" required [(ngModel)]="contact.email"></ion-input>
-    </ion-item>
+  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <!-- Contact Info Section -->
+        <ion-col size="12" size-md="6" class="contact-info">
+          <ion-card class="contact-info-card">
+            <ion-card-content>
+              <!-- Address -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <ion-icon name="home-outline"></ion-icon>
+                </div>
+                <div class="contact-info-content">
+                  <h4>Address</h4>
+                  <p>4671 Sugar Camp Road, Owatonna, Minnesota, 55060</p>
+                </div>
+              </div>
 
-    <ion-item>
-      <ion-label position="floating">Message</ion-label>
-      <ion-textarea name="message" required [(ngModel)]="contact.message"></ion-textarea>
-    </ion-item>
+              <!-- Phone -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+                <div class="contact-info-content">
+                  <h4>Phone</h4>
+                  <p>571-457-2321</p>
+                </div>
+              </div>
 
-    <ion-button expand="full" type="submit" [disabled]="!contactForm.form.valid">
-      Send Message
-    </ion-button>
-  </form>
+              <!-- Email -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </div>
+                <div class="contact-info-content">
+                  <h4>Email</h4>
+                  <p>ntamerrwael</p>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <!-- Contact Form Section -->
+        <ion-col size="12" size-md="6" class="contact-form">
+          <ion-card>
+            <ion-card-content>
+              <h2>Send Message</h2>
+              <form>
+                <ion-item>
+                  <ion-label position="floating">Full Name</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="floating">Email</ion-label>
+                  <ion-input type="email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="floating">Message</ion-label>
+                  <ion-textarea></ion-textarea>
+                </ion-item>
+
+                <ion-button expand="block" type="submit" class="send-button">Send</ion-button>
+              </form>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

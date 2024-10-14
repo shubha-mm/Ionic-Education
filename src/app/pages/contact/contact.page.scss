@@ -1,19 +1,102 @@
-.page-content {
-    --background: linear-gradient(to bottom, #4e54c8, #8f44fd);
-    padding: 20px; 
-  }
-  
-  .custom-header {
-    --background: linear-gradient(to right, #4e54c8, #8f44fd);
-    height: 100px; 
-  }
-  
- 
-  ion-item {
-    margin-bottom: 15px;
-  }
-  
-  ion-button {
-    margin-top: 20px;
-  }
-  
+.custom-toolbar {
+  --background: #1e1e1e;
+  --color: #ffffff;
+  text-align: center;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.section-header p {
+  color: #fff;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.contact-info-card, .contact-form ion-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contact-info-icon {
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-icon ion-icon {
+  font-size: 30px;
+  line-height: 70px;
+  color: #1da9c0;
+}
+
+.contact-info-content {
+  margin-left: 20px;
+}
+
+.contact-info-content h4 {
+  color: #1da9c0;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+  color: #333;
+  font-size: 1em;
+}
+
+.contact-form h2 {
+  color: #333;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.send-button {
+  --background: #00bcd4;
+  --color: #ffffff;
+  margin-top: 20px;
+}
+
+.send-button:hover {
+  --background: #ffffff;
+  --color: #00bcd4;
+  border: 1px solid #00bcd4;
+}
+
+ion-content {
+  --background: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center/cover;
+  position: relative;
+}
+
+ion-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7); /* Adjust the opacity as needed */
+}
