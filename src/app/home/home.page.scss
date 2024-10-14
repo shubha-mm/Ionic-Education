@@ -3,18 +3,7 @@ ion-content {
   padding: 0;
   margin: 0;
   height: 100%;
-
-
-  .scroller {
-    width: 300px;
-    height: 100px;
-    overflow-y: scroll;
-    scrollbar-width: thin;
-  }
-
-  scrollbar-width: thin; 
 }
-
 
 .header-bg {
   background: linear-gradient(to right, #c4e0e5, #4ca1af);
@@ -30,17 +19,16 @@ ion-content {
   font-weight: bold;
 }
 
-
 .search-bar-header {
   padding: 10px;
   border-radius: 20px;
-  color:white;
- 
-}
-
-.search-bar-header:hover{
   color: white;
 }
+
+.search-bar-header:hover {
+  color: white;
+}
+
 .search-bar-header ion-input {
   --padding-start: 10px;
   border-radius: 20px;
@@ -49,7 +37,6 @@ ion-content {
 .search-bar-header ion-button {
   --color: #3b82f6;
 }
-
 
 ion-card {
   margin: 10px 0;
@@ -73,7 +60,6 @@ ion-card-content {
   padding: 10px;
 }
 
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -85,7 +71,6 @@ ion-card-content ion-card {
   background-color: white;
   border-radius: 10px;
 }
-
 
 ion-chip {
   --background: white;
@@ -101,11 +86,6 @@ ion-chip ion-label {
   font-weight: bold;
 }
 
-ion-card {
-  transition: none;
-}
-
-
 .hover-grid {
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -115,39 +95,20 @@ ion-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .hover-test-card {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .hover-test-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(70, 68, 143, 0.2);
 }
 
-
-// cursor css 
-.click-effect {
-  position: relative;
-  overflow: hidden;
+.scroll {
+  scrollbar-width: thin;
+  -ms-overflow-style: none;  /* IE and Edge */
 }
 
-.click-effect::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s, opacity 1s;
-  pointer-events: none;
-}
-
-.click-effect:active::after {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 0;
+.scroll::-webkit-scrollbar {
+  width: 0;  /* Chrome, Safari, Opera */
 }
