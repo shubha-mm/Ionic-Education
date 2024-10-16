@@ -87,12 +87,15 @@
   border: 1px solid #00bcd4;
 }
 
-/* Background Image and Dark Overlay */
+/* Background Image and Lighter Overlay */
 ion-content {
-  --background: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center/cover;
+  --background: url('https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
   position: relative;
+  overflow-y: auto; /* Enable scrolling */
+  height: 100vh; /* Full viewport height */
 }
 
+/* Reduced dark overlay for more brightness */
 ion-content::after {
   content: '';
   position: absolute;
@@ -100,7 +103,21 @@ ion-content::after {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.7); /* Dark overlay */
+  background-color: rgba(0, 0, 0, 0.1); /* Very light overlay */
+}
+
+/* Scrollbar Styling */
+ion-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+ion-content::-webkit-scrollbar-thumb {
+  background-color: #1da9c0;
+  border-radius: 10px;
+}
+
+ion-content::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
@@ -118,7 +135,7 @@ ion-content::after {
   }
 
   ion-content::after {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker for smaller screens */
   }
 }
 
