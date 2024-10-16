@@ -1,3 +1,4 @@
+// Main Content Styling
 ion-content {
   --background: linear-gradient(to top, #831e79, #5645ad);
   padding: 0;
@@ -5,6 +6,7 @@ ion-content {
   height: 100%;
 }
 
+// Header Background
 .header-bg {
   background: linear-gradient(to right, #831e79, #5645ad);
   height: 150px;
@@ -13,17 +15,17 @@ ion-content {
   justify-content: center;
 }
 
-.title {
-  font-size: 24px;
-  color: white;
-  font-weight: bold;
-}
-
-
+// Card Styling
 ion-card {
   margin: 10px 0;
   background: transparent;
   border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition
+}
+
+ion-card:hover {
+  transform: translateY(-5px); // Raise the card on hover
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); // Add shadow on hover
 }
 
 ion-card-header {
@@ -42,18 +44,27 @@ ion-card-content {
   padding: 10px;
 }
 
+// Grid Layout for Books and Courses
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
-ion-card-content ion-card {
-  height: 100px;
+// Card Content within Grid
+.grid ion-card {
+  height: 100px; // Fixed height for grid cards
   background-color: white;
   border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition for grid cards
 }
 
+.grid ion-card:hover {
+  transform: translateY(-5px); // Raise the card on hover
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); // Add shadow on hover
+}
+
+// Chip Styling
 ion-chip {
   --background: white;
   color: #000;
@@ -68,6 +79,78 @@ ion-chip ion-label {
   font-weight: bold;
 }
 
+// Custom Toolbar Styling
+.custom-toolbar {
+  --background: linear-gradient(to right, #5645ad, #831e79); // Gradient color for navbar
+  color: white;
+  
+ 
+}
+
+
+// Logout Button Styling
+.logout-btn {
+  margin-top: 20px;
+}
+
+// Hover effect for the test card
+.hover-test-card {
+  margin: 10px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition for test card
+}
+
+.hover-test-card:hover {
+  transform: translateY(-5px); // Raise the card on hover
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); // Add shadow on hover
+}
+// Custom Toolbar Styling
+.custom-toolbar {
+  --background: linear-gradient(to right, #5645ad, #831e79); // Gradient color for navbar
+  color: white;
+  display: flex;
+  align-items: center; // Center items vertically
+  justify-content: space-between; // Space between title and search bar container
+  padding: 20px;
+}
+
+// Header Container
+.header-container {
+  display: flex; // Align title and search bar in a row
+  align-items: center; // Center vertically
+  flex-grow: 1; // Allow the container to grow and take available space
+}
+
+// Title Styling
+.title {
+  margin-right: 10px; // Space between title and search container
+}
+
+// Search Container
+.search-container {
+  display: flex; // Align items in a row
+  align-items: center; // Vertically align items
+  flex: 1; // Make the search container take remaining space
+}
+
+// Searchbar Styling
+ion-searchbar {
+  --background: #f3f4f6; // Light background for search bar
+  --border-radius: 8px; // Rounded corners
+  --padding-start: 16px; // Padding on the left side
+  margin-right: 10px; // Space between search bar and button
+  flex: 1; // Allow the search bar to take up available space
+}
+
+// Search Button Styling
+.search-button {
+  --background: linear-gradient(135deg, #831e79, #5645ad); // Gradient background
+  --border-radius: 8px; // Rounded corners
+  --color: white; // Button text color
+  height: 40px; // Match height with the search bar
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 

@@ -6,13 +6,17 @@
   </ion-header>
 
   <ion-content class="scrollable-content">
-    <ion-item class="search-bar">
-      <ion-input placeholder="Search..."></ion-input>
-      <ion-button slot="end" fill="clear">
-        <ion-icon slot="icon-only" name="search"></ion-icon>
+    <div class="search-container">
+      <ion-searchbar
+        placeholder="Search for courses..."
+        class="search-input"
+        debounce="500"
+      ></ion-searchbar>
+      <ion-button class="search-button" expand="default">
+        <ion-icon name="search-outline"></ion-icon>
       </ion-button>
-    </ion-item>
-
+    </div>
+  
     <ion-list class="menu-list">
       <ion-item routerLink="/home">
         <ion-icon slot="start" name="home"></ion-icon>
@@ -39,27 +43,31 @@
         <ion-label>Edit Profile</ion-label>
       </ion-item>
     </ion-list>
+  
     <ion-button expand="full" color="success" class="logout-btn" routerLink="/login">Logout</ion-button>
   </ion-content>
+  
 </ion-menu>
 
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="custom-toolbar">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Online Education</ion-title>
 
-    <ion-buttons slot="end">
-      <ion-item>
-        <ion-input placeholder="Search..." clearInput></ion-input>
-        <ion-button>
-          <ion-icon slot="icon-only" name="search"></ion-icon>
+    <div class="header-container"> <!-- New container for title and search bar -->
+      <ion-title class="title">Online Education</ion-title>
+      <div class="search-container">
+        <ion-searchbar placeholder="Search for courses..."></ion-searchbar>
+        <ion-button class="search-button">
+          <ion-icon name="search-outline"></ion-icon>
         </ion-button>
-      </ion-item>
-    </ion-buttons>
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
+
+
 
 <ion-content id="main-content" class="scrollable-content">
   <div class="header-bg">
@@ -72,7 +80,7 @@
     </ion-card-header>
     <ion-card-content>
       <div class="grid hover-grid">
-        <ion-card *ngFor="let book of books"></ion-card>
+        <ion-card *ngFor="let book of books" class="hover-card"></ion-card>
       </div>
     </ion-card-content>
   </ion-card>
@@ -83,7 +91,7 @@
     </ion-card-header>
     <ion-card-content>
       <div class="grid hover-grid">
-        <ion-card class="click-effect" *ngFor="let course of courses"></ion-card>
+        <ion-card class="click-effect hover-card" *ngFor="let course of courses"></ion-card>
       </div>
     </ion-card-content>
   </ion-card>
@@ -98,4 +106,5 @@
       </ion-chip>
     </ion-card-content>
   </ion-card>
-</ion-content>
+
+ 
