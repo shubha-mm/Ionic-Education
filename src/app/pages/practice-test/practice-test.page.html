@@ -1,13 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>practice-test</ion-title>
+    <ion-title>Test Selection</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">practice-test</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" *ngFor="let test of tests">
+        <ion-card class="test-card">
+          <ion-card-header>
+            <ion-card-title>{{ test.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Price: ₹{{ test.price }}</p>
+            <ion-button expand="full" (click)="selectTest(test.name)">Select Test</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

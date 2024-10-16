@@ -9,9 +9,13 @@ import { environment } from '../environments/environment';
 
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+import { PracticeTestPage } from './pages/practice-test/practice-test.page'; // Import your page
+
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,
+   
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

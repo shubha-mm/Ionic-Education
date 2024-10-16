@@ -1,0 +1,26 @@
+.test-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 2px 4px rgba(38, 84, 57, 0.2);
+  
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+  
+    ion-card-title {
+      font-size: 1.5rem;
+      color: #3b82f6; /* Blue color */
+    }
+  
+    ion-card-content p {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  
+    ion-button {
+      --background: #3b82f6;
+      --background-hover: #2563eb; /* Darker shade on hover */
+      --border-radius: 12px;
+    }
+  }
+  
