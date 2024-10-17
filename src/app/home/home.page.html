@@ -79,7 +79,10 @@
     </ion-card-header>
     <ion-card-content>
       <div class="grid hover-grid">
-        <ion-card *ngFor="let book of books" class="hover-card"></ion-card>
+        <ion-card *ngFor="let book of books" class="hover-card">
+          <ion-img [src]="book.image"></ion-img>
+        <ion-card-title>{{ book.title }}</ion-card-title>
+        </ion-card>
       </div>
     </ion-card-content>
   </ion-card>
@@ -91,7 +94,8 @@
     <ion-card-content>
       <div class="grid hover-grid">
         <ion-card class="click-effect hover-card" *ngFor="let course of courses">
-          
+          <ion-img [src]="course.image"></ion-img>
+          <ion-card-title>{{ course.title }}</ion-card-title>
         </ion-card>
       </div>
     </ion-card-content>
