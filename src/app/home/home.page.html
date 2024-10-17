@@ -16,7 +16,7 @@
         <ion-icon name="search-outline"></ion-icon>
       </ion-button>
     </div>
-  
+
     <ion-list class="menu-list">
       <ion-item routerLink="/home">
         <ion-icon slot="start" name="home"></ion-icon>
@@ -43,10 +43,10 @@
         <ion-label>Edit Profile</ion-label>
       </ion-item>
     </ion-list>
-  
+
     <ion-button expand="full" color="success" class="logout-btn" routerLink="/login">Logout</ion-button>
   </ion-content>
-  
+
 </ion-menu>
 
 <ion-header>
@@ -90,7 +90,9 @@
     </ion-card-header>
     <ion-card-content>
       <div class="grid hover-grid">
-        <ion-card class="click-effect hover-card" *ngFor="let course of courses"></ion-card>
+        <ion-card class="click-effect hover-card" *ngFor="let course of courses">
+          
+        </ion-card>
       </div>
     </ion-card-content>
   </ion-card>
@@ -106,4 +108,3 @@
     </ion-card-content>
   </ion-card>
 
- 

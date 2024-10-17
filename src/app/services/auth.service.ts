@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Auth,createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { Auth,createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, authState } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import  firebase from 'firebase/compat/app';
 
 @Injectable({
   providedIn: 'root',  // This ensures the service is available globally
@@ -18,6 +19,16 @@ export class AuthService {
     });
   }
 
+  async googleLogin(): Promise<any> {
+    try {
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(this.auth, provider);
+      return result;
+    } catch (error) {
+      console.error('Error in Google login:', error);
+      throw error;
+    }
+  }
 
 
   signup(email: string, password: string) {

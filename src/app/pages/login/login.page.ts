@@ -16,11 +16,21 @@ export class LoginPage {
   login() {
     this.authService.login(this.email, this.password)
       .then(() => {
-        this.router.navigate(['/home']); 
+        this.router.navigate(['/home']);
       })
-      .catch((error: any) => {  
+      .catch((error: any) => {
         console.log('Login error:', error);
-        
+
       });
+  }
+
+  async googleLogin() {
+    try {
+      await this.authService.googleLogin();
+      console.log('Google login successful');
+      this.router.navigate(['/home']); 
+    } catch (error) {
+      console.error('Google login failed', error);
+}
   }
 }
