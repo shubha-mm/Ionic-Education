@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-books', 
+  selector: 'app-books',
   templateUrl: './books.page.html',
-  styleUrls: ['./books.page.scss'], 
+  styleUrls: ['./books.page.scss'],
 })
 export class BooksPage {
   aiBooks = [
@@ -11,28 +11,28 @@ export class BooksPage {
       title: 'AI Fundamentals',
       subtitle: 'Learn the Basics',
       description: 'A comprehensive guide to AI.',
-      image: 'path/to/image1.jpg',
+      image: 'assets/course/1.jpg',
       url: 'https://link-to-ai-book.com'
     },
     {
       title: 'Advanced AI Concepts',
       subtitle: 'Deep Learning and Beyond',
       description: 'Explore advanced topics in AI.',
-      image: 'path/to/image2.jpg',
+      image: 'assets/course/3.png',
       url: 'https://link-to-advanced-ai-book.com'
     },
     {
       title: 'Practical AI Applications',
       subtitle: 'Using AI in Real World',
       description: 'How to apply AI in practical scenarios.',
-      image: 'path/to/image3.jpg',
+      image: 'assets/course/4.png',
       url: 'https://link-to-practical-ai-book.com'
     },
     {
       title: 'AI Ethics and Society',
       subtitle: 'Understanding the Implications',
       description: 'Explore ethical considerations in AI.',
-      image: 'path/to/image4.jpg',
+      image: 'assets/course/Ai 2 image.jpg',
       url: 'https://link-to-ai-ethics-book.com'
     }
   ];
@@ -42,28 +42,28 @@ export class BooksPage {
       title: 'Web Development Essentials',
       subtitle: 'Master the Fundamentals',
       description: 'A complete overview of web technologies.',
-      image: 'path/to/image4.jpg',
+      image: 'assets/web/web 1.webp',
       url: 'https://link-to-web-book.com'
     },
     {
       title: 'Modern Web Development',
       subtitle: 'The Complete Guide',
       description: 'Stay updated with modern web practices.',
-      image: 'path/to/image5.jpg',
+      image: 'assets/web/web 2.jpg',
       url: 'https://link-to-modern-web-book.com'
     },
     {
       title: 'Responsive Web Design',
       subtitle: 'Building Websites for All Devices',
       description: 'Learn the principles of responsive design.',
-      image: 'path/to/image6.jpg',
+      image: 'assets/web/web 3.jpg',
       url: 'https://link-to-responsive-web-book.com'
     },
     {
       title: 'JavaScript: The Good Parts',
       subtitle: 'Mastering the Language',
       description: 'An in-depth look at JavaScript.',
-      image: 'path/to/image7.jpg',
+      image: 'assets/web/web 4.jpg',
       url: 'https://link-to-javascript-book.com'
     }
   ];
@@ -131,15 +131,15 @@ export class BooksPage {
   ];
 
   openBook(url: string) {
-    window.open(url, '_blank'); 
+    window.open(url, '_blank');
   }
 
-  
+
   searchBooks() {
-    
+
   }
 
   openSidebar() {
-    
+
   }
 }
