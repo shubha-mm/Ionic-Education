@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { AngularFirestore } from '@angular/fire/compat/firestore'; // For Firestore
+import { AngularFireStorage } from '@angular/fire/compat/storage'; // For Firebase Storage
+import { finalize } from 'rxjs/operators';
 
 
 @Component({
@@ -16,24 +18,52 @@ export class ProfilePage {
     profileImage: ''
   };
 
-  constructor() {}
+  selectedFile: any; 
+
+  constructor(
+    private firestore: AngularFirestore,
+    private storage: AngularFireStorage
+  ) {}
 
   onFileSelected(event: any) {
-    const file = event.target.files[0];
-    if (file) {
+    this.selectedFile = event.target.files[0];
+    if (this.selectedFile) {
       const reader = new FileReader();
       reader.onload = () => {
         this.user.profileImage = reader.result as string;
       };
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(this.selectedFile);
     }
   }
 
+  // Handle form submission
   onSubmit() {
-    if (this.user.fullName && this.user.email && this.user.phone && this.user.bio) {
-      console.log('Form submitted successfully:', this.user);
+    if (this.selectedFile) {
+      const filePath = `profileImages/${new Date().getTime()}_${this.selectedFile.name}`;
+      const fileRef = this.storage.ref(filePath);
+      const task = this.storage.upload(filePath, this.selectedFile);
+
+      task.snapshotChanges().pipe(
+        finalize(() => {
+          fileRef.getDownloadURL().subscribe((url) => {
+            this.user.profileImage = url;
+            this.saveUserData();
+          });
+        })
+      ).subscribe();
     } else {
-      console.log('Form is invalid');
+      this.saveUserData();
     }
+  }
+
+
+  saveUserData() {
+    this.firestore.collection('users').doc(this.user.email).set(this.user)
+      .then(() => {
+        console.log('User profile updated successfully');
+      })
+      .catch((error) => {
+        console.error('Error updating profile: ', error);
+      });
   }
 }

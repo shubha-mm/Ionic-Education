@@ -30,6 +30,11 @@
       <ion-button expand="full" routerLink="/login" color="light" class="login-button">
         Already have an account? Login
       </ion-button>
+
+      <ion-button expand="full" class="google-login-button" (click)="googleLogin()">
+        <ion-icon name="logo-google" slot="start"></ion-icon>
+        Login with Google
+      </ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

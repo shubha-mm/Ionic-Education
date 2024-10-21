@@ -20,7 +20,16 @@ export class SignupPage {
       })
       .catch((error: any) => {
         console.log('Signup error:', error);
-        // Handle signup error, e.g., show an alert
       });
+  }
+
+  async googleLogin() {
+    try {
+      await this.authService.googleLogin();
+      console.log('Google login successful');
+      this.router.navigate(['/home']);
+    } catch (error) {
+      console.error('Google login failed', error);
+}
   }
 }
