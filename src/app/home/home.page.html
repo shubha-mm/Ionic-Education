@@ -44,9 +44,8 @@
       </ion-item>
     </ion-list>
 
-    <ion-button expand="full" color="success" class="logout-btn" routerLink="/login">Logout</ion-button>
+    <ion-button expand="full"  class="logout-btn" routerLink="/login">Logout</ion-button>
   </ion-content>
-
 </ion-menu>
 
 <ion-header>
@@ -55,7 +54,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
 
-    <div class="header-container"> <!-- New container for title and search bar -->
+    <div class="header-container">
       <div class="search-container">
         <ion-searchbar placeholder="Search for courses..."></ion-searchbar>
         <ion-button class="search-button">
@@ -65,8 +64,6 @@
     </div>
   </ion-toolbar>
 </ion-header>
-
-
 
 <ion-content id="main-content" class="scrollable-content">
   <div class="header-bg">
@@ -80,8 +77,8 @@
     <ion-card-content>
       <div class="grid hover-grid">
         <ion-card *ngFor="let book of books" class="hover-card">
-          <ion-img [src]="book.image"></ion-img>
-        <ion-card-title>{{ book.title }}</ion-card-title>
+          <ion-img [src]="book.image" class="full-image"></ion-img>
+          <ion-card-title>{{ book.title }}</ion-card-title>
         </ion-card>
       </div>
     </ion-card-content>
@@ -94,7 +91,7 @@
     <ion-card-content>
       <div class="grid hover-grid">
         <ion-card class="click-effect hover-card" *ngFor="let course of courses">
-          <ion-img [src]="course.image"></ion-img>
+          <ion-img [src]="course.image" class="full-image"></ion-img>
           <ion-card-title>{{ course.title }}</ion-card-title>
         </ion-card>
       </div>
@@ -111,4 +108,4 @@
       </ion-chip>
     </ion-card-content>
   </ion-card>
-
+</ion-content>

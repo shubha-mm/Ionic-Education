@@ -47,21 +47,28 @@ ion-card-content {
 // Grid Layout for Books and Courses
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); // Responsive grid layout
   gap: 10px;
 }
 
 // Card Content within Grid
 .grid ion-card {
-  height: 100px; // Fixed height for grid cards
+  height: auto; // Allow flexible height for grid cards
   background-color: white;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition for grid cards
+  overflow: hidden; // Ensures image fits within card border
 }
 
-.grid ion-card:hover {
-  transform: translateY(-5px); // Raise the card on hover
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); // Add shadow on hover
+.full-image {
+  width: 100%; // Ensure the image fills the card width
+  height: 150px; // Fixed height for uniformity
+  object-fit: cover; // Maintain aspect ratio and cover the card area
+  transition: transform 0.3s ease; // Add transition for zoom effect
+}
+
+// Hover effect on the image
+.hover-card:hover .full-image {
+  transform: scale(1.05); // Slight zoom effect on hover
 }
 
 // Chip Styling
@@ -83,14 +90,18 @@ ion-chip ion-label {
 .custom-toolbar {
   --background: linear-gradient(to right, #5645ad, #831e79); // Gradient color for navbar
   color: white;
-  
- 
+  display: flex;
+  align-items: center; // Center items vertically
+  justify-content: space-between; // Space between title and search bar container
+  padding: 20px;
 }
-
 
 // Logout Button Styling
 .logout-btn {
   margin-top: 20px;
+  --background: #d9534f; // Change to a red color for the logout button
+  --color: white; // Ensure text color is white
+  --border-radius: 8px; // Rounded corners
 }
 
 // Hover effect for the test card
@@ -102,15 +113,6 @@ ion-chip ion-label {
 .hover-test-card:hover {
   transform: translateY(-5px); // Raise the card on hover
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); // Add shadow on hover
-}
-// Custom Toolbar Styling
-.custom-toolbar {
-  --background: linear-gradient(to right, #5645ad, #831e79); // Gradient color for navbar
-  color: white;
-  display: flex;
-  align-items: center; // Center items vertically
-  justify-content: space-between; // Space between title and search bar container
-  padding: 20px;
 }
 
 // Header Container
@@ -145,13 +147,5 @@ ion-searchbar {
 .search-button {
   --background: linear-gradient(135deg, #831e79, #5645ad); // Gradient background
   --border-radius: 8px; // Rounded corners
-  --color: white; // Button text color
-  height: 40px; // Match height with the search bar
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  --color: white; // Text color
 }
-
-
-
-
