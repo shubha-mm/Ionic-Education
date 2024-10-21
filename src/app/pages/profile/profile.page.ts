@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-profile',
@@ -12,25 +13,27 @@ export class ProfilePage {
     email: '',
     phone: '',
     bio: '',
+    profileImage: ''
   };
 
-  constructor(private alertController: AlertController) {}
+  constructor() {}
 
-  async onSubmit() {
-    const alert = await this.alertController.create({
-      header: 'Profile Updated',
-      message: 'Your profile has been updated successfully!',
-      buttons: ['OK'],
-    });
-
-    await alert.present();
-    this.resetForm();
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.user.profileImage = reader.result as string;
+      };
+      reader.readAsDataURL(file);
+    }
   }
 
-  resetForm() {
-    this.user.fullName = '';
-    this.user.email = '';
-    this.user.phone = '';
-    this.user.bio = '';
+  onSubmit() {
+    if (this.user.fullName && this.user.email && this.user.phone && this.user.bio) {
+      console.log('Form submitted successfully:', this.user);
+    } else {
+      console.log('Form is invalid');
+    }
   }
 }

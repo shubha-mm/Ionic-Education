@@ -11,29 +11,44 @@
 
 <ion-content class="page-content">
   <div class="profile-image-container">
-    <ion-img src="assets/images/profile-placeholder.png" alt="Profile Image" class="profile-image"></ion-img>
+    <ion-img [src]="user.profileImage || 'assets/images/profile-placeholder.png'" alt="Profile Image" class="profile-image"></ion-img>
+    <ion-button expand="block" (click)="fileInput.click()">Change Profile Image</ion-button>
+    <input type="file" #fileInput hidden (change)="onFileSelected($event)">
   </div>
 
-  <form (ngSubmit)="onSubmit()" #profileForm="ngForm">
+  <!-- Add novalidate to prevent default browser validation -->
+  <form (ngSubmit)="onSubmit()" #profileForm="ngForm" novalidate>
     <ion-item>
       <ion-label position="floating">Full Name</ion-label>
-      <ion-input type="text" name="fullName" required [(ngModel)]="user.fullName"></ion-input>
+      <ion-input type="text" name="fullName" required [(ngModel)]="user.fullName" #fullName="ngModel"></ion-input>
     </ion-item>
+    <div *ngIf="fullName.invalid && fullName.touched">
+      <ion-text color="danger">Full Name is required</ion-text>
+    </div>
 
     <ion-item>
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" name="email" required [(ngModel)]="user.email"></ion-input>
+      <ion-input type="email" name="email" required [(ngModel)]="user.email" #email="ngModel"></ion-input>
     </ion-item>
+    <div *ngIf="email.invalid && email.touched">
+      <ion-text color="danger">Valid Email is required</ion-text>
+    </div>
 
     <ion-item>
       <ion-label position="floating">Phone</ion-label>
-      <ion-input type="tel" name="phone" required [(ngModel)]="user.phone"></ion-input>
+      <ion-input type="tel" name="phone" required [(ngModel)]="user.phone" #phone="ngModel"></ion-input>
     </ion-item>
+    <div *ngIf="phone.invalid && phone.touched">
+      <ion-text color="danger">Phone number is required</ion-text>
+    </div>
 
     <ion-item>
       <ion-label position="floating">Bio</ion-label>
-      <ion-textarea name="bio" required [(ngModel)]="user.bio"></ion-textarea>
+      <ion-textarea name="bio" required [(ngModel)]="user.bio" #bio="ngModel"></ion-textarea>
     </ion-item>
+    <div *ngIf="bio.invalid && bio.touched">
+      <ion-text color="danger">Bio is required</ion-text>
+    </div>
 
     <ion-button expand="full" type="submit" [disabled]="!profileForm.form.valid">
       Save Changes
