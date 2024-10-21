@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth,createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, authState } from '@angular/fire/auth';
+import { Auth,createUserWithEmailAndPassword,sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, authState } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import  firebase from 'firebase/compat/app';
 
@@ -33,6 +33,15 @@ export class AuthService {
 
   signup(email: string, password: string) {
     return createUserWithEmailAndPassword(this.auth, email, password);
+  }
+
+  async resetPassword(email: string): Promise<void> {
+    try {
+      await sendPasswordResetEmail(this.auth, email);
+      console.log('Password reset email sent');
+    } catch (error) {
+      console.error('Error in resetting password:', error);
+    }
   }
 
   getCurrentUser() {
