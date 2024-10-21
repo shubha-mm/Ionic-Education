@@ -35,3 +35,27 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+/* Style for Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #35327b; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #831e79;
+    border-radius: 10px; 
+    border: 3px solid #5645ad;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5645ad; 
+  }
+  
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #831e79 #831e79;
+  }
+  
