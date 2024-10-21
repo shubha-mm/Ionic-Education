@@ -16,11 +16,11 @@ export class SignupPage {
   signup() {
     this.authService.signup(this.email, this.password)
       .then(() => {
-        this.router.navigate(['/home']);  // Navigate to the home page on successful signup
+        this.router.navigate(['/home']);  
       })
       .catch((error: any) => {
         console.log('Signup error:', error);
-        // Handle signup error, e.g., show an alert
+        
       });
   }
 }

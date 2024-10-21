@@ -1,65 +1,66 @@
 .page-content {
-  --background: linear-gradient(to bottom, #831e79, #5645ad); /* Gradient Background */
+  --background: linear-gradient(to bottom, #831e79, #5645ad); 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
-  padding: 0; /* No padding to avoid pushing the card */
-  margin: 0; /* No margin to avoid extra spacing */
+  height: 100vh; 
+  padding: 0; 
+  margin: 0; 
 }
 
 .custom-header {
-  --background: linear-gradient(to right, #831e79, #5645ad); /* Custom Header Gradient */
+  --background: linear-gradient(to right, #831e79, #5645ad); 
   color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .signup-card {
   width: 100%;
-  max-width: 400px; /* Limit card width */
-  background-color: #ffffff; /* White background */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 400px; 
+  background-color: #ffffff;
+  border-radius: 10px; 
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  text-align: center; /* Center text inside the card */
+  text-align: center;
 }
 
 .signup-card ion-card-header {
   text-align: center;
   font-weight: bold;
   font-size: 24px;
-  color: #831e79; /* Title Color */
-  padding: 20px 0; /* Padding for Card Header */
+  color: #831e79;
+  padding: 20px 0;
 }
 
 .signup-card ion-card-content {
-  padding: 20px; /* Padding for Card Content */
+  padding: 15px;
+  margin-right: 10px;
 }
 
 .custom-item {
-  margin-bottom: 15px; /* Spacing between input items */
+  margin-bottom: 15px;
 }
 
 .signup-button {
-  --background: linear-gradient(to right, #831e79, #5645ad); /* Gradient Button Background */
-  color: white; /* Button Text Color */
-  border-radius: 20px; /* Rounded Button Corners */
-  margin-top: 20px; /* Top margin for spacing */
-  font-weight: bold; /* Bold Text for Button */
+  --background: linear-gradient(to right, #831e79, #5645ad); 
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px; 
+  font-weight: bold; 
 }
 
 .login-button {
-  color: #831e79; /* Login Button Text Color */
-  border-radius: 20px; /* Rounded Corners */
-  margin-top: 10px; /* Top margin for spacing */
-  --background: #ffffff; /* White Background for Login Button */
-  --border: 1px solid #831e79; /* Border for Login Button */
+  color: #831e79; 
+  border-radius: 20px; 
+  margin-top: 10px; 
+  --background: #ffffff; 
+  --border: 1px solid #831e79; 
 }
 
 ion-label {
-  color: #831e79; /* Label Color */
+  color: #831e79;
 }
 
 ion-icon {
-  color: #831e79; /* Back Button Icon Color */
+  color: #831e79; 
 }
