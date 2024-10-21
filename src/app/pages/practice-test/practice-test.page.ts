@@ -24,6 +24,6 @@ export class PracticeTestPage {
 
   selectTest(testName: string) {
     console.log('Selected Test:', testName);
-    // Here you can navigate to another page or handle the selected test.
+   
   }
 }
