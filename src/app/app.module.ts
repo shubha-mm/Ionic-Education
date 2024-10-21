@@ -10,7 +10,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
-import { PracticeTestPage } from './pages/practice-test/practice-test.page'; // Import your page
+import { PracticeTestPage } from './pages/practice-test/practice-test.page'; 
 
 
 @NgModule({

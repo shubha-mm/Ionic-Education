@@ -1,11 +1,9 @@
-/* Custom Toolbar */
 .custom-toolbar {
   --background: #1e1e1e;
   --color: #ffffff;
   text-align: center;
 }
 
-/* Section Header */
 .section-header {
   text-align: center;
   margin-bottom: 50px;
@@ -24,7 +22,6 @@
   margin: 0 auto;
 }
 
-/* Grid and Card Styling */
 .contact-info-card, .contact-form ion-card {
   background-color: #ffffff;
   border-radius: 10px;
@@ -67,7 +64,7 @@
   font-size: 1em;
 }
 
-/* Contact Form Styling */
+
 .contact-form h2 {
   color: #333;
   font-size: 2em;
@@ -87,25 +84,24 @@
   border: 1px solid #00bcd4;
 }
 
-/* Background Image and Lighter Overlay */
 ion-content {
   --background: url('https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
   position: relative;
-  overflow-y: auto; /* Enable scrolling */
-  height: 100vh; /* Full viewport height */
+  overflow-y: auto;
+  height: 100vh;
 }
 
-/* Reduced dark overlay for more brightness */
+
 ion-content::after {
   content: '';
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1); /* Very light overlay */
+  background-color: rgba(0, 0, 0, 0.1); 
 }
 
-/* Scrollbar Styling */
+
 ion-content::-webkit-scrollbar {
   width: 8px;
 }
@@ -134,7 +130,7 @@ ion-content::-webkit-scrollbar-track {
   }
 
   ion-content::after {
-    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker for smaller screens */
+    background-color: rgba(0, 0, 0, 0.2); 
   }
 }
 
@@ -168,4 +164,26 @@ ion-content::-webkit-scrollbar-track {
   .send-button {
     font-size: 16px;
   }
+}
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #35327b; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #831e79;
+  border-radius: 10px; 
+  border: 3px solid #5645ad;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5645ad; 
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3060ad white;
 }
