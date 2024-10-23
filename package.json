@@ -27,6 +27,7 @@
     "@capacitor/haptics": "6.0.1",
     "@capacitor/keyboard": "6.0.2",
     "@capacitor/status-bar": "6.0.1",
+    "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
     "@ionic/angular": "^8.0.0",
     "bootstrap": "^5.3.3",
     "firebase": "^10.14.1",
