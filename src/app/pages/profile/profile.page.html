@@ -16,7 +16,6 @@
     <input type="file" #fileInput hidden (change)="onFileSelected($event)">
   </div>
 
-  <!-- Add novalidate to prevent default browser validation -->
   <form (ngSubmit)="onSubmit()" #profileForm="ngForm" novalidate>
     <ion-item>
       <ion-label position="floating">Full Name</ion-label>
