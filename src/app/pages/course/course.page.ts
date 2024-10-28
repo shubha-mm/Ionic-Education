@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 export class CoursesPage {
   aiCourses = [
     { image: 'assets/course/1.jpg', title: 'AI Course 1', subtitle: 'Introduction to AI', description: 'Learn the basics of Artificial Intelligence.', videoUrl: 'https://youtu.be/NwGHeX3vHDI?si=N0Vpa5xbLOIyHIJi' },
-    { image: 'assets/course/3.png', title: 'AI Course 2', subtitle: 'AI and Machine Learning', description: 'Explore AI and its applications in Machine Learning.', videoUrl: 'https://www.example.com/ai-course2' },
-    { image: 'assets/course/4.png', title: 'AI Course 3', subtitle: 'Deep Learning', description: 'Dive into Deep Learning techniques and frameworks.', videoUrl: 'https://www.example.com/ai-course3' },
-    { image: 'assets/course/Ai 2 image.jpg', title: 'AI Course 4', subtitle: 'AI in Robotics', description: 'Learn how AI is being integrated into robotics.', videoUrl: 'https://www.example.com/ai-course4' },
+    { image: 'assets/course/3.png', title: 'AI Course 2', subtitle: 'AI and Machine Learning', description: 'Learn the basics of Artificial Intelligence.', videoUrl: 'https://www.example.com/ai-course2' },
+    { image: 'assets/course/4.png', title: 'AI Course 3', subtitle: 'Deep Learning', description: 'Learn the basics of Artificial Intelligence.', videoUrl: 'https://www.example.com/ai-course3' },
+    { image: 'assets/course/Ai 2 image.jpg', title: 'AI Course 4', subtitle: 'AI in Robotics', description: 'Learn the basics of Artificial Intelligence.', videoUrl: 'https://www.example.com/ai-course4' },
   ];
 
   webCourses = [
-    { image: 'assets/web/web 1.webp', title: 'Web Development 101', subtitle: 'HTML, CSS, and JavaScript', description: 'Learn the fundamentals of web development.', videoUrl: 'https://www.example.com/web-course1' },
-    { image: 'assets/web/web 2.jpg', title: 'Advanced Web Development', subtitle: 'React and Angular', description: 'Master modern web frameworks like React and Angular.', videoUrl: 'https://www.example.com/web-course2' },
-    { image: 'assets/web/web 3.jpg', title: 'Full-Stack Development', subtitle: 'From Frontend to Backend', description: 'Build complete web applications from scratch.', videoUrl: 'https://www.example.com/web-course3' },
+    { image: 'assets/web/web 1.webp', title: 'Web Development 101', subtitle: 'HTML, CSS, and JavaScript', description: 'Learn how to secure web applications from common threats.', videoUrl: 'https://www.example.com/web-course1' },
+    { image: 'assets/web/web 2.jpg', title: 'Advanced Web Development', subtitle: 'React and Angular', description: 'Learn how to secure web applications from common threats.', videoUrl: 'https://www.example.com/web-course2' },
+    { image: 'assets/web/web 3.jpg', title: 'Full-Stack Development', subtitle: 'From Frontend to Backend', description: 'Learn how to secure web applications from common threats.', videoUrl: 'https://www.example.com/web-course3' },
     { image: 'assets/web/web 4.jpg', title: 'Web Security', subtitle: 'Secure Web Applications', description: 'Learn how to secure web applications from common threats.', videoUrl: 'https://www.example.com/web-course4' },
   ];
 

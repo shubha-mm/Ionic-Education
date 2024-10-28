@@ -7,7 +7,7 @@ ion-content {
 
 .header-bg {
   background: linear-gradient(to right, #831e79, #5645ad);
-  height: 150px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,12 +17,12 @@ ion-card {
   margin: 10px 0;
   background: transparent;
   border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 ion-card:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 ion-card-header {
@@ -43,26 +43,28 @@ ion-card-content {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 10px;
 }
 
 .grid ion-card {
-  height: auto; 
+  height: auto;
   background-color: white;
   border-radius: 10px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .full-image {
-  width: 100%; 
-  height: 150px; 
-  object-fit: cover; 
-  transition: transform 0.3s ease; 
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  image-rendering:optimizeQuality;
+
+  transition: transform 0.3s ease;
 }
 
 .hover-card:hover .full-image {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 ion-chip {
@@ -80,61 +82,61 @@ ion-chip ion-label {
 }
 
 .custom-toolbar {
-  --background: linear-gradient(to right, #5645ad, #831e79); 
+  --background: linear-gradient(to right, #5645ad, #831e79);
   color: white;
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
 }
 
 .logout-btn {
   margin-top: 20px;
-  --background: #d9534f; 
-  --color: white; 
-  --border-radius: 8px; 
+  --background: #d9534f;
+  --color: white;
+  --border-radius: 8px;
 }
 
 
 .hover-test-card {
   margin: 10px 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hover-test-card:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
   display: flex;
-  align-items: center; 
-  flex-grow: 1; 
+  align-items: center;
+  flex-grow: 1;
 }
 
 
 .title {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .search-container {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   flex: 1;
 }
 
 
 ion-searchbar {
-  --background: #f3f4f6; 
-  --border-radius: 8px; 
+  --background: #f3f4f6;
+  --border-radius: 8px;
   --padding-start: 16px;
-  margin-right: 10px; 
+  margin-right: 10px;
   flex: 1;
 }
 
 
 .search-button {
   --background: linear-gradient(135deg, #831e79, #5645ad);
-  --border-radius: 8px; 
-  --color: white; 
+  --border-radius: 8px;
+  --color: white;
 }
